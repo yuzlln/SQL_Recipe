@@ -6,6 +6,6 @@ SELECT COALESCE(category, 'ALL') AS category
    , SUM(price) AS amount
 FROM purchase_detail_log
 GROUP BY category
-	 , sub_category WITH ROLLUP
+    , sub_category WITH ROLLUP
 ORDER BY category
-	 , sub_category;
+    , sub_category;
