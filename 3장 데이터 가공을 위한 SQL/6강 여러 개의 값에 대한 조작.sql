@@ -12,7 +12,7 @@ FROM quarterly_sales;
 
 -- 최댓값/최솟값
 SELECT GREATEST(q2, q3, q4) AS greatest_sales
-	, LEAST(q2, q3, q4) AS least_sales
+    , LEAST(q2, q3, q4) AS least_sales
 FROM quarterly_sales;
 
 
@@ -41,8 +41,7 @@ FROM mst_users_with_dates;
 
 -- 날짜 데이터 차이 (지정 단위)
 SELECT user_id
-    -- TIMESTAMPDIFF(unit, 날짜1, 날짜2) : 날짜1 < 날짜2, unit = YEAR/MONTH/DAY
-    , TIMESTAMPDIFF(YEAR, birth_date, DATE(register_stamp)) AS register_age 
+    , TIMESTAMPDIFF(YEAR, birth_date, DATE(register_stamp)) AS register_age -- TIMESTAMPDIFF(unit, 날짜1, 날짜2) : 날짜1 < 날짜2, unit = YEAR/MONTH/DAY
 FROM mst_users_with_dates;
 
 
