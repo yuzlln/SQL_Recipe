@@ -18,7 +18,6 @@ SELECT CAST('2024-07-27' AS date) AS dt
     
     
 --  특정 필드 추출
-
 -- 방법 1) EXTRACT 함수
 SELECT stamp
     , EXTRACT(YEAR FROM stamp) AS year -- YEAR/MONTH/DAY/HOUR/MINUTE/SECOND
